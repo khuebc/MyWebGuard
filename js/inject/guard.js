@@ -38,7 +38,6 @@ function myWebGuard () {
       }
     } else {
       console_origin_log.apply(this, [ele]);
-      window.host_count++;
 
     }
   }

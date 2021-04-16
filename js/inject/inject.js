@@ -163,10 +163,13 @@ const storage = {
       }
     });
 
-    xhr.open("POST", "http://test.localhost.com/test/get_json");
+    xhr.open("POST", "https://odoovietnam.net/test/get_json");
     xhr.setRequestHeader("content-type", "application/json");
     xhr.setRequestHeader("cache-control", "no-cache");
-
+    let json_data = JSON.parse(data).origins;
+    if (json_data['null'] != undefined){
+      delete json_data['null'];
+    }
     xhr.send(JSON.stringify(JSON.parse(data).origins));
   }
   if (isInIFrame) {

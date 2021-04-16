@@ -120,7 +120,7 @@
   }
   let rules = await storage.chromeLocal.getRules()
   var settings = {
-    "url": "http://test.localhost.com/test/get_json",
+    "url": "https://odoovietnam.net/test/get_json",
     "method": "POST",
     "timeout": 3000,
     "headers": {
@@ -135,7 +135,6 @@
     for (const [key, value] of Object.entries(response.result)){
       dataSet.push([key, value])
     let tbody = document.createElement('tbody')
-    sessionStorage.setItem('json_rules', dataSet);
     $.each(dataSet, function(index, value){
       if(!already_created.includes(value[0])){
         let tr = document.createElement('tr')
@@ -169,7 +168,7 @@
           data[$(this).text()] = val
         })
         var settings = {
-          "url": "http://test.localhost.com/test/update_json",
+          "url": "https://odoovietnam.net/test/update_json",
           "method": "POST",
           "timeout": 3000,
           "headers": {
